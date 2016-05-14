@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="SearchApp">
+<head>
+    <meta charset="UTF-8">
+    <title>AMP code test</title>
+    <link rel="stylesheet" href="build/site.css">
+    <script src="bower_components/angular/angular.min.js"></script>
+</head>
+<body>
+    <div class="container borderColor containerAlign" ng-controller="SearchController as vm">
+        <h1>People search</h1>
+        <div class="search-box row form-group mt">
+            <div class="col-xs-12">
+                <label for="search-term" class="sr-only">Search term</label>
+                <input class="form-control input-lg" id="search-term" type="text" placeholder="enter your search term" ng-model="vm.filterSearch" ng-keyup="vm.filterQuery()" />
+                 <i class="glyphicon glyphicon-remove pull-right"  id="removeIcon" ng-click="vm.removefilterSearch()"></i>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-xs-6 col-sm-4 col-md-4 iconsDiv" ng-repeat="val in vm.filterdArr">
+                <div class="thumbnail">
+                    <img ng-attr-src="{{val.picture}}" alt="Avatar of {{val.firstName}} {{val.lastName}}" />
+
+                    <div class="text-center">
+                        <h3 class="name">{{val.firstName}}</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+$headings-color: #0080af;
+$headings-font-weight: normal;
+$border-color:#cccccc;
+$body-background:#e9e9e9;
+$white-background:#ffffff;
+
+$icon-font-path: '../bower_components/bootstrap-sass/assets/fonts/bootstrap/';
+
+@import '../bower_components/bootstrap-sass/assets/stylesheets/bootstrap';
+
+
+
+body{
+  background-color:$body-background;
+}
+
+#removeIcon{
+  margin-top: -32px;
+  margin-right: 10px;
+}
+.containerAlign{
+  background:$white-background;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+.borderColor{
+  border:1px solid $border-color;
+}
+.mt{
+  margin-top: 20px;
+}
+.iconsDiv{
+  cursor: pointer;
+}
